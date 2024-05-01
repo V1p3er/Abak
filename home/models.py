@@ -1,3 +1,21 @@
 from django.db import models
 
-# Create your models here.
+class SoilSample(models.Model):
+    number = models.IntegerField(primary_key=True)
+    point_numb = models.IntegerField()
+    x = models.FloatField()
+    y = models.FloatField()
+    name = models.CharField(max_length=255)
+    depth = models.CharField(max_length=10)
+    depth_index = models.IntegerField()
+    sand = models.FloatField()
+    silt = models.FloatField()
+    clay = models.FloatField()
+    sp = models.FloatField()
+    ece = models.FloatField()
+    ph = models.FloatField()
+    oc = models.FloatField()
+    n = models.FloatField()
+    p = models.FloatField()
+    k = models.IntegerField()
+    caco3 = models.FloatField()
