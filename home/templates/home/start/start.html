@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="https://fonts.googleapis.com/css?family=IRANSansWeb&display=swap" rel="stylesheet" />
+      <link href="{% static 'start.css' %}" rel="stylesheet" />
+      <title>Document</title>
+  </head>
+  <body>
+      <header>
+          <div id="logo">
+            <img src="{% static 'images/logo.png' %}" alt="logo" id="logo" />
+          </div>
+          <div id="categori">
+            <a href="{% url 'homepage' %}" id="categori-child">خانه</a>
+            <a href="#" id="categori-child">درباره ما</a>
+            <a href="#" id="categori-child">منابع</a>
+            <a href="{% url 'homepage' %}" id="categori-child">ارتباط با ما </a>
+          </div>
+          <div id="search">
+            <a href="{% url 'homepage' %}"> <button id="button-header"> ورود به حساب کاربری <img id="img-btn-header" src="{% static 'images/Check Circle.png' %}" alt="circle"/> </button> </a> 
+          </div>
+        </header>
+          <div class="name"></div>
+          <div class="bg-page"></div>
+          <div class="label-3">
+              <div class="label-3-1"></div>
+              <span class="txt-label-3">مشاهده نتایج</span>
+              <span class="txt-label-3-1">Results</span>
+          </div>
+          <div class="label-4">
+              <div class="label-4-1"></div>
+              <span class="txt-label-4">دریافت اطلاعات</span>
+              <span class="txt-label-4-1">Export</span>
+          </div>
+          <div class="label-2">
+              <div class="label-2-1"></div>
+              <span class="txt-label-2">پارامتر های اطلاعاتی خاک</span>
+              <span class="txt-label-2-1">Soil Data</span>
+          </div>
+          <div class="label-1">
+              <div class="label-1-1"></div>
+              <span class="txt-label-1">منطقه مورد مطالعه</span>
+              <span class="txt-label-1-1">AOI</span>
+          </div>
+          <div class="map-div">
+              <div class="map"></div>
+              <div class="map-header">
+                  <div class="map-header-child"></div>
+                  <span class="map-header-child-1">نقشه</span>
+                  <span class="map-header-child-2">Map</span>
+              </div>
+          </div>
+          <div class="search">
+              <div class="search-1"></div>
+              <span class="search-1-1">جستجو</span>
+          </div>
+          <div class="select">
+              <div class="select-1"></div>
+              <span class="txt-select">منطقه مورد مطالعه</span>
+          </div>
+          <div class="select-child">
+              <div class="select-child-1"></div>
+              <span class="txt-select-child">نام منطقه </span>
+              <div class="select-child-2">
+                  <div class="select-child-3">
+                      <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+                  </div>
+              </div>
+          </div>
+          <div class="select-info">
+              <div class="select-info-child"></div>
+              <span class="txt-select-info">بارگذاری اطلاعات منطقه</span>
+              <div class="select-info-1">
+                  <div class="select-info-2">
+                      <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+                  </div>
+              </div>
+          </div>
+          <div class="select-info-dw">
+              <div class="select-info-dw-child"></div>
+              <span class="txt-select-dw">بارگیری اطلاعات منطقه</span>
+              <div class="select-dw-1">
+                  <div class="select-dw-2"> 
+                      <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+                  </div>
+              </div>
+          </div>
+          <div class="search-icon">
+          <img id="photo" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+          </div>
+          <div class="select-icon">
+              <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+          </div>
+          <div class="select-icon">
+              <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+          </div>
+          <button type="button" class="next-level">مرحله بعد </button>
+      </div>
+        <!-- start footer -->
+    <footer>
+        <div class="footer">
+          <p class="title">لینک های مفید</p>
+          <div class="shape">
+            <div class="line"></div>
+            <div class="triangle"></div>
+          </div>
+          <div class="footermenu">
+            <ul>
+              <li>نرم افزارهای کاربردی</li>
+              <li>منابع</li>
+              <li>درباره آباک</li>
+              <li>ارتباط با تیم توسعه</li>
+            </ul>
+          </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places"
+        async defer></script>
+
+    <script>
+      let map;
+
+      function initMap() {
+        const initialLocation = { lat: 33.716469, lng: 50.351088 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: initialLocation,
+          zoom: 16,
+        });
+
+        const input = document.getElementById("search-input");
+        const searchBox = new google.maps.places.SearchBox(input);
+
+        map.addListener("bounds_changed", () => {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        searchBox.addListener("places_changed", () => {
+          const places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          const bounds = new google.maps.LatLngBounds();
+          places.forEach((place) => {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            if (place.geometry.viewport) {
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+    </script>
+  </body>
+</html>

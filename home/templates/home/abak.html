@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static "home/abak.css" %}" />
+    <link rel="icon" href="{% static "home/images/logo.png" %}" />
     <title>Abak</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
         <img src="{% static "home/images/logo.png" %}" alt="logo" id="logo" />
       </div>
       <div id="categori">
-        <a href="{% url "homepage" %}" id="categori-child">خانه</a>
+        <a href="#" id="categori-child">خانه</a>
         <a href="#" id="categori-child">درباره ما</a>
         <a href="#" id="categori-child">منابع</a>
         <a href="#" id="categori-child">ارتباط با ما </a>
@@ -29,82 +30,55 @@
           آنالیز دقیق خاک ها به صورت آنلاین برای کشاورزی هوشمندانه تر
         </div>
         <div id="button-page1">
-          <button id="button1-page1">شروع به کار کنید</button>
+          <button id="button1-page1"> <a id="btn-start" target="_blank" href="{% url 'start' %}" >شروع به کار کنید</a></button>
           <div id="map-page2">
-            <img src="{% static "home/images/KarajMap.jpg" %}" id="map-karaj" alt="map" />
+            <spline-viewer
+              class="nature"
+              url="https://prod.spline.design/Cio-qk4fmXzOqaUl/scene.splinecode"
+            ></spline-viewer>
           </div>
         </div>
       </div>
-      <!-------------------page2------------------>
       <div id="page2">
         <div id="title-page2">آباک راهنمای شما در مسیر شناخت خاک</div>
         <div id="guidance">
           <div id="section">
             <div id="icon-section">
-              <img
-                src="{% static "home/images/icons8-earth-100.png" %}"
-                id="icon-road"
-                alt="earth"
-              />
+              <img src="{% static "home/images/icons8-earth-100.png" %}" id="icon-road" alt="earth" />
             </div>
             <div id="title-section">منطقه موردنظر خود را انتخاب کنید.</div>
           </div>
           <div id="icon-section-main">
-            <img
-              src="{% static "home/images/icons8-arrow-64.png" %}"
-              id="icon-road-main"
-              alt="earth"
-            />
+            <img src="{% static "home/images/icons8-arrow-64.png" %}" id="icon-road-main" alt="earth" />
           </div>
           <div id="section">
             <div id="icon-section">
-              <img
-                src="{% static "home/images/icons8-tick-100.png" %}"
-                id="icon-road"
-                alt="earth"
-              />
+              <img src="{% static "home/images/icons8-tick-100.png" %}" id="icon-road" alt="earth" />
             </div>
             <div id="title-section">پارامتر های لازم را تیک بزنید.</div>
           </div>
           <div id="icon-section-main">
-            <img
-              src="{% static "home/images/icons8-arrow-64.png" %}"
-              id="icon-road-main"
-              alt="earth"
-            />
+            <img src="{% static "home/images/icons8-arrow-64.png" %}" id="icon-road-main" alt="earth" />
           </div>
           <div id="section">
             <div id="icon-section">
-              <img
-                src="{% static "home/images/icons8-result-100.png" %}"
-                id="icon-road"
-                alt="earth"
-              />
+              <img src="{% static "home/images/icons8-result-100.png" %}" id="icon-road" alt="earth" />
             </div>
             <div id="title-section">
               نتایج مطالعات خاکشناسی منطقه را دریافت کنید.
             </div>
           </div>
           <div id="icon-section-main">
-            <img
-              src="{% static "home/images/icons8-arrow-64.png" %}"
-              id="icon-road-main"
-              alt="earth"
-            />
+            <img src="{% static "home/images/icons8-arrow-64.png" %}" id="icon-road-main" alt="earth" />
           </div>
           <div id="section">
             <div id="icon-section">
-              <img
-                src="{% static "home/images/icons8-export-100.png" %}"
-                id="icon-road"
-                alt="earth"
-              />
+              <img src="{% static "home/images/icons8-export-100.png" %}" id="icon-road" alt="earth" />
             </div>
             <div id="title-section">خروجی بگیرید!</div>
           </div>
         </div>
       </div>
-      <!-------------------page3------------------>
       <div id="page3">
         <div id="title">
           <span class="title">درباره ی آباک</span>
@@ -114,6 +88,7 @@
             <div class="white-line"></div>
           </div>
         </div>
+        <img src="{% static "home/images/shape.png" %}" alt="shape.png" class="circles" />
         <div id="photos">
           <img src="{% static "home/images/page3/Rectangle-28.png" %}" alt="" class="image1" />
           <img src="{% static "home/images/page3/Rectangle-27.png" %}" alt="" class="image2" />
@@ -131,11 +106,58 @@
             زمینه ی کاربرد خاک ها گرفته شود و موجبات پیشرفت در زمینه ی تناسب
             کاربری اراضی را فراهم کند.
           </div>
-          <a href=""><div id="more-article">بیشتر بخوانید >></div></a>
+          <a href="#ore"><div id="more-article">بیشتر بخوانید >></div></a>
+        </div>
+      </div>
+<div id="page4">
+        <div id="header-page4">
+          <span id="header-page4-child">+</span> راهنمای آباک
+        </div>
+        <div id="abak-guide">
+          <div id="abak-guide-child">
+            <img src="{% static "home\images\page4\card_pic.png" %}" alt="guide" id="guide-child-img">
+            <div id="guide-child-txt">
+              <div id="guide-child-txt1">مشکلات و خطاهای رایج</div>
+              <div id="guide-child-txt2">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...
+              </div>
+              <button id="g-c-b">ادامه</button>
+            </div>
+          </div>
+          <div id="abak-guide-child">
+            <img src="{% static "home/images/page4/card_pic.png" %}" alt="guide" id="guide-child-img">
+            <div id="guide-child-txt">
+              <div id="guide-child-txt1">تیپ ها و میانبر ها</div>
+              <div id="guide-child-txt2">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...
+              </div>
+              <button id="g-c-b">ادامه</button>
+            </div>
+          </div>
+          <div id="abak-guide-child">
+            <img src="{% static "home/images/page4/card_pic.png" %}" alt="guide" id="guide-child-img">
+            <div id="guide-child-txt">
+              <div id="guide-child-txt1">سوالات متداول</div>
+              <div id="guide-child-txt2">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...
+              </div>
+              <button id="g-c-b">ادامه</button>
+            </div>
+          </div>
+          <div id="abak-guide-child">
+            <img src="{% static "home/images/page4/card_pic.png" %}" alt="guide" id="guide-child-img">
+            <div id="guide-child-txt">
+              <div id="guide-child-txt1">از اینجا شروع کنید</div>
+              <div id="guide-child-txt2">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...
+              </div>
+              <button id="g-c-b">ادامه</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <!-- start footer -->
+
     <footer>
       <div class="footer">
         <p class="title">لینک های مفید</p>
@@ -155,13 +177,9 @@
         <div class="socialmedia">
           <span class="socialmedia">شبکه های اجتماعی :</span>
           <div class="icons">
-            <a href=""
-              ><img src="{% static "home/images/icons/instgram.png" %}" alt="instgram.png"
-            /></a>
-            <a href=""><img src="{% static "home/images/icons/X.png" %}" alt="x.png" /></a>
-            <a href=""
-              ><img src="{% static "home/images/icons/whatsapp.png" %}" alt="whatsapp.png"
-            /></a>
+            <a href="#"><img src="{% static "home/images/icons/instgram.png" %}" alt="instgram.png" /></a>
+            <a href="#"><img src="{% static "home/images/icons/X.png" %}" alt="x.png" /></a>
+            <a href="#"><img src="{% static "home/images/icons/whatsapp.png" %}" alt="whatsapp.png" /></a>
           </div>
         </div>
         <div id="search">
@@ -169,11 +187,15 @@
         </div>
       </div>
       <div class="copyright">
-        <img src="{% static "home/images/team-logo.png" %}" alt="" class="teamlogo" />
-        Endless Creative Team - 2024
+        <img src="{% static "home/images/icons/copyright.jpg" %}" alt="" class="teamlogo" />
+        <a href="{% url 'homepage' %}" class="copyright">Endless Creative Team - 2024</a>
       </div>
     </footer>
     <!-- end footer -->
     <script src="{% static "home/main.js" %}"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.2.8/build/spline-viewer.js"
+    ></script>
   </body>
 </html>

@@ -1,0 +1,169 @@
+*{
+    direction: rtl;
+}
+body{
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: abak;
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.eot);
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.woff);
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.woff2);
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.ttf);
+}
+@font-face {
+    font-family: abak1;
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.eot);
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.woff2);
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.woff);
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.ttf);
+}
+@font-face {
+    font-family: abak2;
+    src: url(../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.eot);
+    src: url(../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.ttf);
+    src: url(../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.woff2);
+    src: url(../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.woff);
+}
+div.container{
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , url(./images/login-bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.container img.logo{
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+    position: absolute;
+    left: calc(50% - 80px/2);
+}
+span.sign{
+    font-size: 36px;
+    color: #fff;
+    font-family: abak;
+    position: absolute;
+    top: 110px;
+}
+span.welcome{
+    font-size: 18px;
+    color: #fff;
+    font-family: abak1;
+    position: absolute;
+    top: 170px;
+}
+div.gmail-facebook{
+    position: absolute;
+    top:  210px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+div.facebook,div.gmail{
+    width: 330px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: abak;
+    font-size: 18px;
+    margin: 0 10px;
+}
+div.gmail-facebook img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+div.gmail-facebook a{
+    color: unset;
+    text-decoration: none;
+}
+span.email{
+    position: absolute;
+    top: 300px;
+    color: #fff;
+    font-family: abak1;
+    font-size: 18px;
+}
+form{
+    position: absolute;
+    top: 350px;
+    display: flex;
+    flex-flow: column wrap;
+}
+input#email , input#password{
+    width: 680px;
+    height: 60px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: abak1;
+    border: unset;
+    background-image: url(./images/mail.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 60px;
+}
+input#password{
+    background-image: url(./images/lock.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 60px;
+}
+input#email:focus , input#password:focus{
+    outline: unset;
+    border: 4px solid #565656 ;
+}
+/* input#email{
+    background-image:url('./images/mail.png');
+    background-repeat:no-repeat;
+   background-position: 48px;
+   background-size: 24px 24px;
+} */
+div.login-road{
+    width: 100%;
+    height: 35px;
+    font-family: abak;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+div.login-road a{
+    color: unset;
+    text-decoration: none;
+}
+div.login-road span.question{
+    color: #fff;
+    font-size: 24px;
+}
+div.login-road span.login{
+    color: #3e88e4;
+    font-size: 20px;
+
+}
+input#submit{
+    background-color: #bc6c25;
+    color: #fff;
+    width: 680px;
+    height: 70px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-family: abak;
+    margin-top: 20px;
+}

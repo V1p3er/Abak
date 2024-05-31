@@ -19,3 +19,5 @@ class SoilSample(models.Model):
     p = models.FloatField()
     k = models.IntegerField()
     caco3 = models.FloatField()
+    CEC = models.FloatField()
+    Gravell = models.FloatField()

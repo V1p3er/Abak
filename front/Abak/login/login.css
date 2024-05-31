@@ -1,0 +1,113 @@
+body
+{
+    background-image: url("../images/login/Rectangle\ 44.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+    direction: rtl;
+}
+@font-face {
+    font-family: abak;
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.eot);
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.woff);
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.woff2);
+    src: url(../fonts/IRANSansWeb-Bold/IRANSansWeb-Bold.ttf);
+  }
+  @font-face {
+    font-family: abak1;
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.eot);
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.woff2);
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.woff);
+    src: url(../fonts/IRANSansWeb/IRANSansWeb.ttf);
+  }
+  @font-face {
+    font-family: abak2;
+    src: url(/../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.eot);
+    src: url(/../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.ttf);
+    src: url(/../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.woff2);
+    src: url(/../fonts/IRANSansWeb-Medium/IRANSansWeb-Medium.woff);
+  }
+#help
+{
+    margin:30px 20px auto ;
+    width: fit-content;
+}
+.main
+{
+    text-align: center;
+    margin:0 auto 0  ;
+    width:fit-content ;
+}
+.logo
+{
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 0 ;
+}
+#title
+{
+    margin-top: 30px;
+    font-size: 48px;
+    font-family: 'abak';
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#title2
+{
+    font-size: 24px;
+    font-family: 'abak';
+    margin-bottom: 30px;
+}
+#input-child
+{
+    direction: rtl;
+    background-image:url('../images/login/email.png');
+    background-repeat:no-repeat;
+    background-position:right ; padding-right:25px ;
+    border-radius: 15px;
+    width: 682px;
+    height: 50px;
+    margin-top:5px;
+}
+#input-child1
+{ 
+    direction: rtl;
+    background-image:url('../images/login/Glyph_\ undefined.png');
+    background-repeat:no-repeat;
+    background-position:right ; padding-right:25px ;
+    border-radius: 15px;
+    width: 682px;
+    height: 50px;
+    margin-top:5px;
+}
+button 
+{
+    background-color: #BC6C25;
+    color: white;
+    padding: 14px 20px;
+    margin: 40px auto 0;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'abak';
+    width: 682px;
+    height: 70%;
+    border-radius: 20px;
+}
+#sign
+{
+    margin-top:5px ;
+    font-size: 20px;
+    font-family: 'abak';
+    font-weight: bold;
+    
+}
+span
+{
+    color:#b0d4ff ;
+}
+a
+{
+    text-decoration: none;
+}
