@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'auth/sign-up.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'auth/images/logo.png' %}" alt="" class="logo">
+        <span class="sign">ورود به حساب کابری</span>
+        <span class="welcome">خوش آمدید.روش ورود خود را انتخاب کنید:</span>
+        <div class="gmail-facebook">
+            <a href=""><div class="facebook"><img src="{% static 'auth/images/faceb.jpg' %}" alt="facebook"><span class="article">ورود با فیس بوک</span></div></a>
+            <a href=""><div class="gmail"><img src="{% static 'auth/images/gmail.jpg' %}" alt="gmail"><span class="article">ورود با جیمیل</span></div></a>
+        </div>
+        <span class="email">یا با ایمیل ثبت نام کنید:</span>
+        <form action="{% url 'sign-up' %}" method="post">
+            {% csrf_token %}
+            <input type="email" name="email" id="email" placeholder="ایمیل خود را وارد کنید...">
+            <input type="password" name="password" id="password" placeholder="رمز عبور خود را وارد کنید...">
+            <div class="login-road"><a href="{% url 'login' %}"><span class="question">حساب کاربری دارید؟ </span><span class="login">وارد شوید.</span></a></div>
+            <input type="submit" id="submit" value="ثبت نام">
+        </form>
+    </div>
+</body>
+</html>

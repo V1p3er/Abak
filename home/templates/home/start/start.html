@@ -3,13 +3,14 @@
 <html>
   <head>
       <link href="https://fonts.googleapis.com/css?family=IRANSansWeb&display=swap" rel="stylesheet" />
-      <link href="{% static 'start.css' %}" rel="stylesheet" />
+      <link href="{% static 'home/start.css' %}" rel="stylesheet" />
+      <link rel="icon" href="{% static "home/images/logo.png" %}" />
       <title>Document</title>
   </head>
   <body>
       <header>
           <div id="logo">
-            <img src="{% static 'images/logo.png' %}" alt="logo" id="logo" />
+            <img src="{% static 'home/images/logo.png' %}" alt="logo" id="logo" />
           </div>
           <div id="categori">
             <a href="{% url 'homepage' %}" id="categori-child">خانه</a>
@@ -18,7 +19,7 @@
             <a href="{% url 'homepage' %}" id="categori-child">ارتباط با ما </a>
           </div>
           <div id="search">
-            <a href="{% url 'homepage' %}"> <button id="button-header"> ورود به حساب کاربری <img id="img-btn-header" src="{% static 'images/Check Circle.png' %}" alt="circle"/> </button> </a> 
+            <a href="{% url 'login' %}"> <button id="button-header"> ورود به حساب کاربری <img id="img-btn-header" src="{% static 'home/images/Check_Circle.png' %}" alt="circle"/> </button> </a> 
           </div>
         </header>
           <div class="name"></div>
@@ -64,7 +65,7 @@
               <span class="txt-select-child">نام منطقه </span>
               <div class="select-child-2">
                   <div class="select-child-3">
-                      <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+                      <img id="photo-select" src="{% static 'home/images/Glyph_undefined.png' %}" alt="search"/>
                   </div>
               </div>
           </div>
@@ -73,7 +74,7 @@
               <span class="txt-select-info">بارگذاری اطلاعات منطقه</span>
               <div class="select-info-1">
                   <div class="select-info-2">
-                      <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+                      <img id="photo-select" src="{% static 'home/images/Glyph_undefined.png' %}" alt="search"/>
                   </div>
               </div>
           </div>
@@ -82,18 +83,18 @@
               <span class="txt-select-dw">بارگیری اطلاعات منطقه</span>
               <div class="select-dw-1">
                   <div class="select-dw-2"> 
-                      <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+                      <img id="photo-select" src="{% static 'home/images/Glyph_undefined.png' %}" alt="search"/>
                   </div>
               </div>
           </div>
           <div class="search-icon">
-          <img id="photo" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+          <img id="photo" src="{% static 'home/images/Glyph_undefined.png' %}" alt="search"/>
           </div>
           <div class="select-icon">
-              <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+              <img id="photo-select" src="{% static 'home/images/Glyph_undefined.png' %}" alt="search"/>
           </div>
           <div class="select-icon">
-              <img id="photo-select" src="{% static 'images/Glyph_ undefined.png' %}" alt="search"/>
+              <img id="photo-select" src="{% static 'home/images/Glyph_undefined.png' %}" alt="search"/>
           </div>
           <button type="button" class="next-level">مرحله بعد </button>
       </div>
